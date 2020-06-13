@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>王典作业</title> 
+<style>
+  table,th,td {
+     border-style: 1px solid black;
+     text-align: left;
+  }
+</style>
+<script>
+  var boxes=document.getElementsByClassName("checkbox");
+  function add(){
+    a=document.getElementById("first").value;
+    b=document.getElementById("twice").value;
+    c=document.getElementById("result");
+    c=parseInt(b)+parseInt(a)
+    document.getElementById("result").value=c; 
+  }
+  function sub(){
+    a=document.getElementById("first").value;
+    b=document.getElementById("twice").value;
+    c=document.getElementById("result");
+    c=parseInt(a)-parseInt(b)
+    document.getElementById("result").value=c; 
+  }
+  function ride(){
+    a=document.getElementById("first").value;
+    b=document.getElementById("twice").value;
+    c=document.getElementById("result");
+    c=parseInt(a)*parseInt(b)
+    document.getElementById("result").value=c; 
+  }
+  function devide(){
+    a=document.getElementById("first").value;
+    b=document.getElementById("twice").value;
+    c=document.getElementById("result");
+    c=parseInt(a)/parseInt(b)
+    document.getElementById("result").value=c; 
+  }
+  function check(){  
+    var num=0;
+    for(x = 0;x < boxes.length;x ++){
+		    if (boxes[0].checked == true){
+           num++;
+        };
+        if ( num > 7){
+          alert("请从重新选择！")
+          return false;
+        };
+	  };
+  } 
+  function checkAll(){ 
+    for(i=0;i<boxes.length;i++){
+		    boxes[i].checked="true";        
+	  };
+	}
+  function cancel(){
+    for(i=0;i<boxes.length;i++){
+		    boxes[i].checked="";
+	  };
+  } 
+</script>
+</script>
+</head>
+<body>
+  <from >
+    <table>
+   
+      <tr><td><input type="checkbox" class="checkbox" ></td><td>青菜</td></tr>
+      <tr><td><input type="checkbox" class="checkbox" ></td><td>炒饭</td></tr>
+      <tr><td><input type="checkbox" class="checkbox" ></td><td>鸡蛋</td></tr>
+      <tr><td><input type="checkbox" class="checkbox" ></td><td>火锅</td></tr>
+      <tr><td><input type="checkbox" class="checkbox" ></td><td>番茄炒鸡蛋</td></tr>
+      <tr><td><input type="checkbox" class="checkbox" ></td><td>花菜</td></tr>
+      <tr><td><input type="checkbox" class="checkbox" ></td><td>青椒炒肉丝</td></tr>
+      <tr><td colspan="2"><button onclick="checkAll(this)">全选</button>
+                          <button onclick="cancel(this)">取消</button>
+                 <input type="submit" value="提交" onclick="check(this)"/></td></tr>
+      
+    </table>
+  </from>
+	
+  
+</body>
+</html>

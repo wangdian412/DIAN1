@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>笑脸变色大笑练习(runoob.com)</title>
+<script>
+function bigImg(x)
+{
+	x.style.height="150px";
+	x.style="background-color:yellow";
+	x.style.width="100px";
+	
+}
+
+function normalImg(x)
+{
+	x.style.height="50px";
+	x.style="background-color:red";
+	x.style.width="50px";
+}
+</script>
+</head>
+<body>
+
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="smiley.gif" alt="Smiley" width="32" height="32">
+
+<p>它会大笑和变色哟！嘿嘿</p>
+
+
+</body>
+</html>

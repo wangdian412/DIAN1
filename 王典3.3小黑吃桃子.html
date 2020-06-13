@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>王典</title>
+    <script>
+        var sum = 1;
+        for (var i = 1; i < 10; i++) {
+            sum = (sum + 1) * 2
+        }
+        document.write(sum + "<br />");
+
+        function f(x) { return x < 3 ? 1 : f(x - 1) + f(x - 2); }
+        for (var i = 1; i <= 20; i++) {
+            document.write(f(i) + ", <br>");
+        }
+
+        var arr = [];
+        for (let i = 2; i <= 4; i++) {
+            for (let j = 1;11 - i*2 >= j; j++) {
+                var x = "";
+                var y = j;
+                for (z = 0; z < i; z++) {
+                    x += y;
+                    y += 2;
+                }
+                arr.push(x);
+            }
+        }
+        document.write(arr);
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

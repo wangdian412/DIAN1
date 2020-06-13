@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>王典3，5作业</title>
+    <script>
+        function checkForm() {
+            var r = confirm("提交信息么");
+            if (r) {
+                var name = prompt("请输入姓名");
+                for (let i = 0; i < 3; i++) {
+                    if (name == null) {
+                        return false;
+                    } else if (name == "王典") {
+                        return checkMessage();
+                    } else if (i < 2) {
+                        name = prompt("姓名错误！请重新输入姓名（还有" + (2-i) + "次输入机会）" );
+                    }
+                } 
+                alert("非法用户。");
+                document.getElementById("bt").disabled = "true";
+                return false;
+            } else {
+                return false;
+            }
+        }
+
+        function checkMessage() {
+            var x = document.forms["form1"]["message"].value;
+            if (x == null || x == ""){
+                alert("输入内容不能为空");
+                return false;
+            } else {
+                alert("恭喜您答对了！");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" onsubmit="return checkForm()">
+        输入姓名:
+        <input id="message" type="text">
+        <input id="bt" type="submit" value="提交">
+    </form>
+</body>
+</html>

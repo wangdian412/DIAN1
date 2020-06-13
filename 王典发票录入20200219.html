@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8">
+<title>练习</title>
+<script>
+    function checka()
+    {var a=document.getElementById("date")
+    if(a =="") {alert(请填写)
+    document.getElementById("date").style.background="red"}
+    else{document.getElementById("date").style.background=""}}
+
+    function checkb()
+    {var b=document.getElementById("dm")
+    if(b =="") {alert(请填写)
+    document.getElementById("dm").style.background="red"}
+    else{document.getElementById("dm").style.background=""}}
+</script>
+<style>
+body {text-align:center;}
+</style> 
+</head>
+<body>
+
+<h4>发票录入</h4>
+
+<form> 国家：
+<input type="radio" name="nation" value="中国">中国
+<input type="radio" name="nation" value="日本">日本
+</form>
+
+<form >
+<span style="color:red">*</span>发票种类：
+<select name="invoice type">
+<option value="住宿费">住宿费</option>
+<option value="交通费">交通费</option>
+<option value="餐饮服务费" selected>餐饮服务费</option>
+<option value="保险费">保险费</option>
+</select>
+</form>
+
+<form>
+<span style="color:red">*</span>开票日期：
+<input type="date" name="date">
+</form>
+
+<form>
+<span style="color:red">*</span>
+发票代码：<input type="text" name="发票代码"><br />
+<span style="color:red">*</span>
+发票号码：<input type="text" name="发票号码"><br />
+ 开票单位：<input type="text" name="开票单位"><br />
+纳税人识别号：<input type="text" name="纳税人识别号"><br />
+<span style="color:red">*</span>
+金额（含税）：<input type="text" name="金额（含税）："><br />
+<span style="color:red">*</span>
+名称：<input type="text" name="名称">
+</form>
+
+<form>录入日期：
+<input type="date" name="date">
+</form>
+
+<form >
+<input type="file" value="file select">
+</form>
+
+<form >
+<input type="button" value="文件上传"> <br />
+<input type="button" value="添加">
+<input type="button" value="删除">
+<input type="button" value="修改">
+<input type="button" value="查询">
+<input type="button" value="重置"> 
+</form>
+
+</body>
+</html>

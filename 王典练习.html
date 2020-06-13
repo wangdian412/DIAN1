@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>点击按钮循环对象属性。</p>
+    <button onclick="myFunction()">点我</button>
+    <p id="demo"></p>
+    <p1 id="demo1"></p1>
+    <script>
+        function myFunction() {
+            var myArray = new Array(1, 3, 5, 7, 9, 11, 13);
+            var text = 0
+            var text1 = 0
+            for (const x in myArray) {
+                text += myArray[x];
+            }
+            for (i = 0; i < myArray.length; i++) {
+                text1 += myArray[i];
+            }
+            document.getElementById("demo").innerHTML = text;
+            document.getElementById("demo1").innerHTML = text1;
+        }
+    </script>
+</body>
+</html>
